@@ -49,3 +49,10 @@ console.log(myListwIndex)
 
 // Nesse comando criamos uma nova lista com a função de que cada item dessa nova lista
 // será o item do 'myList' + o seu index
+
+// Filter -> filtra determinado array com base no que voce quer
+
+let myListFiltered = myList.filter((i) => i != 9)
+console.log(myListFiltered)
+
+console.log(myList.reduce((number,i) => number+i))
