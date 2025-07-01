@@ -1,3 +1,10 @@
+const proximaExplicacao = () => {
+    console.log('\n')
+    console.log('--------------------')
+    console.log('\n')
+}
+
+
 let list = ['ola','eu','a']
 list[5] = 'b'
 
@@ -5,58 +12,68 @@ list[5] = 'b'
 // note que a variavel será o indice no iteravel
 
 for (i in list){
-    console.log(i)
+    console.log("Index: ",i)
 }
-console.log('\n')
-console.log('--------------------')
-console.log('\n')
 
+proximaExplicacao()
 
 
 
 // for of
 // note que a variavel será o elemento no iteravel, podendo ser undefined
 for (i of list){
-    console.log(i)
+    console.log("Item: ",i)
 }
 
+proximaExplicacao()
 
 // forreach -> Percorre o array semelhante a forma que o for of faz
 
-let myList = [1,2,3,4,5,6,7,8,9,10]
-myList.forEach((number,i,array)=>{
+let minhaListaU = [1,2,3,4,5,6,7,8,9,10]
+minhaListaU.forEach((number,i,array)=>{
 
     console.log('Estou percorrendo o array ['+ array+ "]" + "\n" + "no index " + i + "\n" + "e sou " + number)
 
 })
 
 
-
+proximaExplicacao()
 
 // map
 // Considere o seguinte array
 
-myList = [1,2,3,4,5,6,7,8,9,10]
+minhaListaU = [1,2,3,4,5,6,7,8,9,10]
 
 // Usamos o map para criar um novo array com base em um ja existente
-console.log(myList)
-console.log(myList.map((i)=> i))
+console.log("Minha lista é: ",minhaListaU)
+console.log('\n')
+console.log("Minha copia de minha lista é: ", minhaListaU.map((i)=> i))
+
+proximaExplicacao()
 
 // note que por enquanto so usamos isso para copiar um array mas...
 
-let myListwIndex = myList.map((number,i) => number+i)
-console.log(myListwIndex)
+let minhaListaUwIndex = minhaListaU.map((number,i) => number+i)
+console.log("Minha lista com index: ", minhaListaUwIndex)
 
 // Nesse comando criamos uma nova lista com a função de que cada item dessa nova lista
-// será o item do 'myList' + o seu index
+// será o item do 'minhaListaU' + o seu index
+
+
 
 // Filter -> filtra determinado array com base no que voce quer
 
-let myListFiltered = myList.filter((i) => i != 9)
-console.log(myListFiltered)
+proximaExplicacao()
 
-console.log(myList.reduce((number,i) => number+i))
+let minhaListaFiltrada = minhaListaU.filter((i) => i != 9)
+console.log("Minha lista filtrada: " , minhaListaFiltrada)
 
+proximaExplicacao()
+
+// Reduce pode ser usado para iterarmos sobre uma lista fazendo uma operação e retornar um valor no final
+console.log("A soma da minha lista: ", minhaListaFiltrada.reduce((number,i) => number+i))
+
+proximaExplicacao()
 
 // for of em Strings
 
@@ -67,6 +84,8 @@ let aluno = "joao"
 for (a of aluno){
     console.log(a)
 }
+
+proximaExplicacao()
 
 // O for of em strings itera sobre ela pegando cada caracter
 
@@ -95,8 +114,9 @@ for (caractere of aluno){
     meuNomeSifrado = minhaSifra(caractere,meuNomeSifrado)
 }
 
-console.log(meuNomeSifrado)
+console.log("Meu nome sifrado: ",meuNomeSifrado)
 
+proximaExplicacao()
 
 // Map , Set
 
@@ -106,8 +126,10 @@ let meuMap = new Map()
 
 meuMap.set(1,"joao")
 
-console.log(meuMap)
+console.log("Meu map: ",meuMap)
 
+
+proximaExplicacao()
 // "Mas os objetos em javascript ja não fazem isso praticamente?"
 // Mais ou menos, em um objeto js você so pode armazenar atributos de valores string mas como voce pôde ver
 // em maps podemos armazenar chaves de qualquer valor
@@ -120,25 +142,28 @@ for ([chave,valor] of meuMap){
     console.log(`Minha chave é ${chave} e o valor é ${valor} `)
 }
 
+proximaExplicacao()
+
 // Set -> um conjunto (lista) que ignora duplicatas
 // Supondo...
 
-let meuset = new Set([1,2,3,4,5,5,7,1,2,2,2,1])
-
+let meuset = new Set([1,2,3,4,5,5,7,1,2,2,2,1,6])
+console.log("Meu set: ", meuset)
 for(num of meuset){
-    console.log(num)
+    console.log("Numero do set: ",num)
 }
 
+proximaExplicacao()
 
 // Mas, se em java, c, c# etc os arrays, listas, vetores ou outro nome que você queira chamar são bem mais complexos e tipados
 // por que em js não?
 // Esse é um dos principais motivos 
 
 let minhaLista = []
-console.log(typeof minhaLista)
+console.log("Tipo da minhaLista: ",typeof minhaLista)
 
-console.log(minhaLista instanceof Array )
-console.log( Array instanceof Object)
+console.log("minhaLista é uma instância de array?: ",minhaLista instanceof Array )
+console.log("Array é uma instância de Object?: ", Array instanceof Object)
 
 
 // Então um array é uma instancia de Object
