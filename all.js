@@ -73,11 +73,9 @@ for (a of aluno){
 // podemos utilizar para simples criptografias / sifras
 let meuNomeSifrado = ""
 const minhaSifra = (caractere,nome) =>{
-    console.log(caractere)
     switch(caractere){
         case "j":
             return nome + "!"
-            console.log(nome)
             break
         case "o":
             return nome + "]"
